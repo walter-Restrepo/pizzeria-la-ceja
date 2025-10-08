@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Pizzería La Ceja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍕 Pizzería La Ceja</h1>
+    <nav>
+      <button id="btn-menu">Menú</button>
+      <button id="btn-carrito">Carrito</button>
+      <span id="contador-carrito" class="contador">0</span>
+    </nav>
+  </header>
+
+  <div id="notificacion" class="notificacion oculto">Producto añadido 🍕</div>
+
+  <div id="modal-carrito" class="modal oculto">
+    <div class="modal-contenido">
+      <h3>🛒 Tu Carrito</h3>
+      <ul id="lista-modal"></ul>
+      <p>Total: <span id="total-modal">$0</span></p>
+      <div class="acciones-modal">
+        <button id="btn-confirmar-modal" class="btn-confirmar">Confirmar compra</button>
+        <button id="cerrar-modal" class="btn-cerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="productos" class="visible">
+      <h2>Nuestras Pizzas</h2>
+      <div class="grid-productos" id="lista-pizzas"></div>
+
+      <br><br>
+      <h2>Nuestras Bebidas</h2>
+      <div class="grid-productos" id="lista-bebidas"></div>
+    </section>
+
+    <section id="carrito" class="oculto">
+      <h2>Tu Pedido</h2>
+      <ul id="lista-carrito"></ul>
+      <div class="resumen">
+        <p>Total: <span id="total">$0</span></p>
+        <button id="btn-pagar">Proceder al Pago</button>
+      </div>
+    </section>
+
+    <section id="pago" class="oculto">
+      <h2>Método de Pago</h2>
+      <div class="metodos-pago-grid">
+
+        <label for="metodo-efectivo">
+          <input type="radio" name="metodo" id="metodo-efectivo" value="Efectivo" checked>
+          <img src="img/efectivo.jpg" alt="Efectivo" class="metodo-imagen">
+          <span>Efectivo</span>
+        </label>
+
+        <label for="metodo-tarjeta">
+          <input type="radio" name="metodo" id="metodo-tarjeta" value="Tarjeta">
+          <img src="img/tarjeta.jpg" alt="Tarjeta" class="metodo-imagen">
+          <span>Tarjeta</span>
+        </label>
+
+        <label for="metodo-transferencia">
+          <input type="radio" name="metodo" id="metodo-transferencia" value="Transferencia">
+          <img src="img/transferencia.webp" alt="Transferencia" class="metodo-imagen">
+          <span>Transferencia</span>
+        </label>
+
+      </div>
+      <button id="btn-confirmar">Confirmar Pago</button>
+    </section>
+
+  <footer>
+    <p>© 2025 Pizzería La Ceja — Proyecto académico</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
